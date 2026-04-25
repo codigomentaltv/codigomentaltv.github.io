@@ -129,6 +129,34 @@ ml('account', '2281881');
     letter-spacing: .02em;
   }
   .lead-form button:hover { background: #EFC250; transform: translateY(-1px); }
+
+  /* ---- CTA Lead Magnet Button (reemplaza form embedded) ---- */
+  .cta-lead-magnet {
+    display: inline-block;
+    background: var(--oro);
+    color: var(--violeta);
+    padding: 22px 48px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35), 0 0 0 4px rgba(212, 175, 55, 0.15);
+    transition: transform .2s, box-shadow .2s, background .2s;
+    margin-bottom: 16px;
+    letter-spacing: .01em;
+    animation: pulse-glow 2.5s ease-in-out infinite;
+  }
+  .cta-lead-magnet:hover {
+    background: #EFC250;
+    transform: translateY(-3px);
+    text-decoration: none;
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.55), 0 0 0 6px rgba(212, 175, 55, 0.2);
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35), 0 0 0 4px rgba(212, 175, 55, 0.15); }
+    50% { box-shadow: 0 8px 32px rgba(212, 175, 55, 0.55), 0 0 0 8px rgba(212, 175, 55, 0.05); }
+  }
+
   .form-note {
     font-size: 13px;
     color: var(--violeta-muy-claro);
@@ -343,8 +371,10 @@ ml('account', '2281881');
       🎬 YouTube · 📸 Instagram · 🎵 TikTok · 📘 Facebook · 🐦 X · 🎙️ <a href="#podcast" style="color:var(--oro);">Spotify Podcast</a>
     </p>
 
-    <!-- MailerLite embedded form: Lead Magnet - 7 Señales PDF -->
-    <div class="ml-embedded" data-form="AoPVQD"></div>
+    <!-- CTA Button to MailerLite form (legacy embed reemplazado por botón directo) -->
+    <a href="https://preview.mailerlite.io/forms/2281881/185315239371211854/share" target="_blank" rel="noopener" class="cta-lead-magnet">
+      🎁 Descargar Guía GRATIS
+    </a>
     <p class="form-note">PDF instantáneo · Sin spam · Te doy de baja con 1 click cuando quieras.</p>
   </div>
 </section>
