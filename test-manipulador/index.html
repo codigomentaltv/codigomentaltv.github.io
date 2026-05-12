@@ -1,157 +1,596 @@
-<!DOCTYPE html>  <html lang="es">
-  <head>
-  <meta charset="UTF-8">
-  <title>Test del Manipulador en 60 segundos | Código Mental</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Test del Manipulador en 60 segundos | Código Mental</title>
 <meta name="description" content="7 preguntas. Respuesta inmediata. Te decimos si la persona en tu vida te está manipulando — y qué hacer.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta property="og:title" content="Test del Manipulador en 60 segundos">
-  <meta property="og:description" content="¿Tu pareja, jefe o familiar te manipula? Test psicológico gratuito de 60 segundos.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://codigomentaltv.github.io/test-manipulador/">
-  <style>
+<meta property="og:title" content="Test del Manipulador en 60 segundos">
+<meta property="og:description" content="¿Tu pareja, jefe o familiar te manipula? Test psicológico gratuito de 60 segundos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codigomentaltv.github.io/test-manipulador/">
+<style>
   :root {
-  --bg: #0a0312;
---bg-card: #160a26;
---bg-card-hover: #1f1130;
---accent: #a855f7;
-  --accent-bright: #c084fc;
-  --gold: #fbbf24;
-  --green: #34d399;
---yellow: #fbbf24;
-  --orange: #fb923c;
-  --red: #f87171;
-  --text: #f3f4f6;
-  --text-muted: #a1a1aa;
-  --border: #2d1f4a;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-body { background: linear-gradient(135deg, #0a0312 0%, #1a0a2e 50%, #2d1450 100%); color: var(--text); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; line-height: 1.5; }
-.container { max-width: 540px; width: 100%; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 32px 24px; box-shadow: 0 20px 60px rgba(168, 85, 247, 0.15); }
-.logo { text-align: center; font-size: 14px; color: var(--accent-bright); letter-spacing: 2px; margin-bottom: 24px; text-transform: uppercase; font-weight: 700; }
-.progress-bar { width: 100%; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-bottom: 32px; }
-.progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--gold)); width: 0%; transition: width 0.4s ease; }
-h1 { font-size: 28px; margin-bottom: 12px; background: linear-gradient(90deg, var(--accent-bright), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2; }
-h2 { font-size: 22px; margin-bottom: 16px; color: var(--text); line-height: 1.3; }
-p { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
-.subtitle { color: var(--text-muted); font-size: 16px; margin-bottom: 24px; }
-.button-primary { display: block; width: 100%; padding: 16px 24px; background: linear-gradient(135deg, var(--accent), var(--accent-bright)); color: white; border: none; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; transition: all 0.2s; text-align: center; margin-top: 12px; }
-.button-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4); }
-.button-primary:disabled { opacity: 0.5; cursor: not-allowed; }
-.answer-option { display: block; width: 100%; padding: 14px 18px; margin-bottom: 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 15px; cursor: pointer; transition: all 0.2s; text-align: left; }
-.answer-option:hover { border-color: var(--accent); background: var(--bg-card-hover); transform: translateX(4px); }
-.input-field { width: 100%; padding: 14px 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 16px; margin-bottom: 12px; }
-.input-field:focus { outline: none; border-color: var(--accent); }
-.privacy-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px; }
-.result-score { text-align: center; margin: 24px 0; }
-.score-number { font-size: 72px; font-weight: 900; background: linear-gradient(90deg, var(--accent-bright), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
-.score-max { font-size: 18px; color: var(--text-muted); }
-.tier-badge { display: inline-block; padding: 8px 18px; border-radius: 20px; font-weight: 700; font-size: 14px; margin: 8px 0 24px; text-transform: uppercase; letter-spacing: 1px; }
-.tier-green { background: rgba(52, 211, 153, 0.2); color: var(--green); border: 1px solid var(--green); }
-.tier-yellow { background: rgba(251, 191, 36, 0.2); color: var(--yellow); border: 1px solid var(--yellow); }
-.tier-orange { background: rgba(251, 146, 60, 0.2); color: var(--orange); border: 1px solid var(--orange); }
-.tier-red { background: rgba(248, 113, 113, 0.2); color: var(--red); border: 1px solid var(--red); }
-.result-message { background: var(--bg); border-left: 3px solid var(--accent); padding: 16px 20px; border-radius: 8px; margin: 16px 0; font-size: 15px; line-height: 1.6; }
-.features-list { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 20px 0; }
-.features-list ul { list-style: none; }
-.features-list li { padding: 8px 0; color: var(--text); display: flex; align-items: flex-start; }
-.features-list li::before { content: '✓'; color: var(--green); font-weight: 700; margin-right: 10px; font-size: 18px; }
-.share-section { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; }
-.share-buttons { display: flex; gap: 8px; margin-top: 12px; justify-content: center; flex-wrap: wrap; }
-.share-btn { padding: 10px 16px; background: var(--bg-card-hover); border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-.upsell-card { background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(251, 191, 36, 0.05)); border: 1px solid var(--accent); border-radius: 12px; padding: 20px; margin-top: 20px; }
-.upsell-card h3 { color: var(--gold); font-size: 17px; margin-bottom: 8px; }
-.upsell-price { font-size: 22px; color: var(--accent-bright); font-weight: 700; margin: 8px 0; }
-.hidden { display: none; }
-.loading { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.footer { text-align: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); }
-.footer a { color: var(--accent-bright); text-decoration: none; }
-.question-text { font-size: 19px; line-height: 1.4; margin-bottom: 24px; font-weight: 500; }
-@media (max-width: 480px) { h1 { font-size: 24px; } .question-text { font-size: 17px; } .score-number { font-size: 56px; } }
+    --bg: #0a0312;
+    --bg-card: #160a26;
+    --bg-card-hover: #1f1130;
+    --accent: #a855f7;
+    --accent-bright: #c084fc;
+    --gold: #fbbf24;
+    --green: #34d399;
+    --yellow: #fbbf24;
+    --orange: #fb923c;
+    --red: #f87171;
+    --text: #f3f4f6;
+    --text-muted: #a1a1aa;
+    --border: #2d1f4a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  body {
+    background: linear-gradient(135deg, #0a0312 0%, #1a0a2e 50%, #2d1450 100%);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 540px;
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.15);
+  }
+  .logo {
+    text-align: center;
+    font-size: 14px;
+    color: var(--accent-bright);
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    width: 0%;
+    transition: width 0.4s ease;
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, var(--accent-bright), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  p { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
+  .subtitle { color: var(--text-muted); font-size: 16px; margin-bottom: 24px; }
+  .button-primary {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .button-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4); }
+  .button-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+  .button-secondary {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .button-secondary:hover { border-color: var(--accent); }
+  .question-card {
+    margin-bottom: 16px;
+  }
+  .question-number {
+    color: var(--accent-bright);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .question-text {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .answer-option {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+  }
+  .answer-option:hover {
+    border-color: var(--accent);
+    background: var(--bg-card-hover);
+    transform: translateX(4px);
+  }
+  .answer-option.selected {
+    border-color: var(--accent);
+    background: rgba(168, 85, 247, 0.15);
+  }
+  .input-field {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .input-field:focus { outline: none; border-color: var(--accent); }
+  .privacy-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 12px;
+  }
+  .result-score {
+    text-align: center;
+    margin: 24px 0;
+  }
+  .score-number {
+    font-size: 72px;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--accent-bright), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+  .score-max {
+    font-size: 18px;
+    color: var(--text-muted);
+  }
+  .tier-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 8px 0 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .tier-green { background: rgba(52, 211, 153, 0.2); color: var(--green); border: 1px solid var(--green); }
+  .tier-yellow { background: rgba(251, 191, 36, 0.2); color: var(--yellow); border: 1px solid var(--yellow); }
+  .tier-orange { background: rgba(251, 146, 60, 0.2); color: var(--orange); border: 1px solid var(--orange); }
+  .tier-red { background: rgba(248, 113, 113, 0.2); color: var(--red); border: 1px solid var(--red); }
+  .result-message {
+    background: var(--bg);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .features-list {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .features-list ul { list-style: none; }
+  .features-list li {
+    padding: 8px 0;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+  }
+  .features-list li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .share-section {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .share-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .share-btn {
+    padding: 10px 16px;
+    background: var(--bg-card-hover);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .share-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .upsell-card {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(251, 191, 36, 0.05));
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .upsell-card h3 {
+    color: var(--gold);
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .upsell-price {
+    font-size: 22px;
+    color: var(--accent-bright);
+    font-weight: 700;
+    margin: 8px 0;
+  }
+  .hidden { display: none; }
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .footer a { color: var(--accent-bright); text-decoration: none; }
+  @media (max-width: 480px) {
+    h1 { font-size: 24px; }
+    .question-text { font-size: 17px; }
+    .score-number { font-size: 56px; }
+  }
 </style>
-  </head>
-  <body>
-  <div class="container">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- PANTALLA INTRO -->
   <div id="screen-intro">
-  <div class="logo">Codigo Mental</div>
-  <h1>Test del Manipulador en 60 segundos</h1>
-  <p class="subtitle">7 preguntas. Respuesta inmediata. Te decimos si la persona en tu vida te esta manipulando — y que hacer.</p>
-  <button class="button-primary" onclick="startTest()">Empezar test gratis</button>
-<p class="privacy-note">100% anonimo · Sin registro · Resultado inmediato</p>
-</div>
-<div id="screen-questions" class="hidden">
-  <div class="logo">Pregunta <span id="question-counter">1</span> de 7</div>
-  <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
-  <div class="question-text" id="question-text"></div>
-  <div id="answers-container"></div>
+    <div class="logo">🧠 Código Mental</div>
+    <h1>Test del Manipulador en 60 segundos</h1>
+    <p class="subtitle">7 preguntas. Respuesta inmediata. Te decimos si la persona en tu vida te está manipulando — y qué hacer.</p>
+    <button class="button-primary" onclick="startTest()">Empezar test gratis →</button>
+    <p class="privacy-note">100% anónimo · Sin registro · Resultado inmediato</p>
   </div>
+
+  <!-- PANTALLA PREGUNTAS -->
+  <div id="screen-questions" class="hidden">
+    <div class="logo">🧠 Pregunta <span id="question-counter">1</span> de 7</div>
+    <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+    <div class="question-card">
+      <div class="question-text" id="question-text"></div>
+      <div id="answers-container"></div>
+    </div>
+  </div>
+
+  <!-- PANTALLA EMAIL GATE -->
   <div id="screen-email" class="hidden">
-  <div class="logo">Tu reporte esta listo</div>
-  <h2>Te incluimos:</h2>
-  <div class="features-list"><ul>
-  <li>Tu <strong>score detallado</strong> (0-105) con interpretacion clinica</li>
-  <li>Las <strong>3 senales mas graves</strong> que aparecieron en tus respuestas</li>
-<li>El <strong>plan de 14 dias</strong> para recuperar tu autonomia emocional</li>
-<li><strong>5 frases exactas</strong> que dicen los manipuladores antes de mentir</li>
-  </ul></div>
-  <p class="subtitle">Te lo enviamos al mail. Sin spam.</p>
-  <input type="email" class="input-field" id="email-input" placeholder="tu@email.com" required>
-  <button class="button-primary" id="submit-email-btn" onclick="submitEmail()">Ver mi reporte completo</button>
-  <p class="privacy-note">Tu email esta seguro. Podes darte de baja en cualquier email.</p>
+    <div class="logo">🔒 Tu reporte está listo</div>
+    <h2>Te incluimos:</h2>
+    <div class="features-list">
+      <ul>
+        <li>Tu <strong>score detallado</strong> (0-105) con interpretación clínica</li>
+        <li>Las <strong>3 señales más graves</strong> que aparecieron en tus respuestas</li>
+        <li>El <strong>plan de 14 días</strong> para recuperar tu autonomía emocional</li>
+        <li><strong>5 frases exactas</strong> que dicen los manipuladores antes de mentir</li>
+      </ul>
+    </div>
+    <p class="subtitle">Te lo enviamos al mail. Sin spam.</p>
+    <input type="email" class="input-field" id="email-input" placeholder="tu@email.com" required>
+    <button class="button-primary" id="submit-email-btn" onclick="submitEmail()">Ver mi reporte completo →</button>
+    <p class="privacy-note">Tu email está seguro. Podés darte de baja en cualquier email.</p>
+  </div>
+
+  <!-- PANTALLA RESULTADO -->
+  <div id="screen-result" class="hidden">
+    <div class="logo">📊 Tu resultado</div>
+    <div class="result-score">
+      <div class="score-number" id="result-score">0</div>
+      <div class="score-max">de 105 puntos</div>
+      <div class="tier-badge" id="result-tier"></div>
+    </div>
+    <div class="result-message" id="result-message"></div>
+
+    <div class="share-section">
+      <strong>Comparte el test</strong>
+      <p style="font-size: 13px; margin-top: 6px;">Si te ayudó, alguien más lo necesita</p>
+      <div class="share-buttons">
+        <a class="share-btn" id="share-whatsapp" target="_blank">📱 WhatsApp</a>
+        <a class="share-btn" id="share-twitter" target="_blank">🐦 X / Twitter</a>
+        <button class="share-btn" onclick="copyLink()">🔗 Copiar link</button>
+      </div>
+    </div>
+
+    <div class="upsell-card">
+      <h3>🎁 Plan de 30 días para recuperar tu poder emocional</h3>
+      <p>Manual completo + workbook + audio guiado. Para los que quieren ir más profundo.</p>
+      <div class="upsell-price">USD $9.90</div>
+      <a class="button-primary" href="https://codigomental4.gumroad.com/l/30-claves-psicologia-oscura" target="_blank" style="text-decoration: none;">Ver plan completo →</a>
+    </div>
+
+    <div class="footer">
+      Este test es informativo. No reemplaza diagnóstico profesional.<br>
+      © 2026 Código Mental · <a href="https://codigomentaltv.github.io">Más recursos gratis</a>
+    </div>
+  </div>
+
 </div>
-<div id="screen-result" class="hidden">
-  <div class="logo">Tu resultado</div>
-  <div class="result-score">
-  <div class="score-number" id="result-score">0</div>
-  <div class="score-max">de 105 puntos</div>
-  <div class="tier-badge" id="result-tier"></div>
-  </div>
-  <div class="result-message" id="result-message"></div>
-  <div class="share-section">
-  <strong>Comparte el test</strong>
-<p style="font-size: 13px; margin-top: 6px;">Si te ayudo, alguien mas lo necesita</p>
-  <div class="share-buttons">
-  <a class="share-btn" id="share-whatsapp" target="_blank">WhatsApp</a>
-  <a class="share-btn" id="share-twitter" target="_blank">X / Twitter</a>
-  <button class="share-btn" onclick="copyLink()">Copiar link</button>
-  </div>
-  </div>
-  <div class="upsell-card">
-  <h3>Plan de 30 dias para recuperar tu poder emocional</h3>
-  <p>Manual completo + workbook + audio guiado.</p>
-  <div class="upsell-price">USD $9.90</div>
-  <a class="button-primary" href="https://codigomental4.gumroad.com/l/30-claves-psicologia-oscura" target="_blank" style="text-decoration: none;">Ver plan completo</a>
-</div>
-<div class="footer">Este test es informativo. No reemplaza diagnostico profesional.<br>(C) 2026 Codigo Mental</div>
-  </div>
-  </div>
-  <script>
-  const BREVO_API_KEY = '';
-  const BREVO_LIST_ID = 7;
+
+<script>
+// =================== CONFIGURACIÓN ===================
+// BREVO FORM EMBED — POST directo al endpoint público nativo de Brevo (sin API key expuesta)
+// URL del form public obtenida del step "Compartir" del editor Brevo (2026-05-11)
+// Si querés regenerar: app.brevo.com -> Formularios -> Codigo Mental - Lead Magnet 7 Senales -> step Compartir
+const BREVO_FORM_URL = 'https://f7023a68.sibforms.com/serve/MUIFAIrMs4jHODSa5R7XKDUPQWvzuJT6AlGKOyWW6O47JCgIeIUaMWMOVQY0H95EvmImogIfM-yYjQx6p7Dl2NyQJS8KBCkJLmtEwQLEhDfhYc7TZBrOClpL99dK6VL_MUgdIpjEEeFXZOa8H9rSUdxjy3l5tsRBJvfL761VFXfSKTJJ2m2HAj0VPovvijng726QfSbjiVfsWzZmDw==';
+const BREVO_LIST_ID = 7; // Lista 7 = Codigo Mental Suscriptores Free PDF
 const FUENTE_TAG = 'test_manipulador_v1';
+
+// =================== PREGUNTAS Y RESPUESTAS ===================
 const questions = [
-{text: "Te pasa que terminas disculpandote vos cuando la otra persona hizo algo mal?", answers: [{text:"Nunca",value:0},{text:"Rara vez",value:5},{text:"A menudo",value:10},{text:"Casi siempre",value:15}]},
-{text: "Sentis que pisas huevos cuando hablas con esta persona?", answers: [{text:"No",value:0},{text:"A veces",value:5},{text:"Frecuentemente",value:10},{text:"Siempre",value:15}]},
-{text: "Cuando expresas un problema, la conversacion termina con vos sintiendote culpable?", answers: [{text:"Nunca",value:0},{text:"A veces",value:5},{text:"A menudo",value:10},{text:"Siempre",value:15}]},
-{text: "Te dice frases tipo estas exagerando, estas loco/a o vos malinterpretas todo?", answers: [{text:"Nunca",value:0},{text:"Rara vez",value:5},{text:"Frecuente",value:10},{text:"Constantemente",value:15}]},
-{text: "Te aisla de tus amigos, familia o intereses gradualmente?", answers: [{text:"No",value:0},{text:"Un poco",value:5},{text:"Notablemente",value:10},{text:"Si, completamente",value:15}]},
-{text: "Reaccionas con miedo o ansiedad antes de que la persona llegue/llame?", answers: [{text:"Nunca",value:0},{text:"A veces",value:5},{text:"A menudo",value:10},{text:"Siempre",value:15}]},
-{text: "Si pensas en dejarlo/cortar, sentis culpa o miedo de lo que va a pasar?", answers: [{text:"No me lo planteo",value:0},{text:"A veces lo pienso",value:5},{text:"Quiero pero no puedo",value:10},{text:"Siento que me destruira si lo hago",value:15}]}
+  {
+    text: "¿Te pasa que terminás disculpándote vos cuando la otra persona hizo algo mal?",
+    answers: [
+      { text: "Nunca", value: 0 },
+      { text: "Rara vez", value: 5 },
+      { text: "A menudo", value: 10 },
+      { text: "Casi siempre", value: 15 }
+    ]
+  },
+  {
+    text: "¿Sentís que pisás 'huevos' cuando hablás con esta persona?",
+    answers: [
+      { text: "No", value: 0 },
+      { text: "A veces", value: 5 },
+      { text: "Frecuentemente", value: 10 },
+      { text: "Siempre", value: 15 }
+    ]
+  },
+  {
+    text: "Cuando expresás un problema, ¿la conversación termina con vos sintiéndote culpable?",
+    answers: [
+      { text: "Nunca", value: 0 },
+      { text: "A veces", value: 5 },
+      { text: "A menudo", value: 10 },
+      { text: "Siempre", value: 15 }
+    ]
+  },
+  {
+    text: "¿Te dice frases tipo 'estás exagerando', 'estás loco/a' o 'vos malinterpretás todo'?",
+    answers: [
+      { text: "Nunca", value: 0 },
+      { text: "Rara vez", value: 5 },
+      { text: "Frecuente", value: 10 },
+      { text: "Constantemente", value: 15 }
+    ]
+  },
+  {
+    text: "¿Te aísla de tus amigos, familia o intereses gradualmente?",
+    answers: [
+      { text: "No", value: 0 },
+      { text: "Un poco", value: 5 },
+      { text: "Notablemente", value: 10 },
+      { text: "Sí, completamente", value: 15 }
+    ]
+  },
+  {
+    text: "¿Reaccionás con miedo o ansiedad antes de que la persona llegue/llame?",
+    answers: [
+      { text: "Nunca", value: 0 },
+      { text: "A veces", value: 5 },
+      { text: "A menudo", value: 10 },
+      { text: "Siempre", value: 15 }
+    ]
+  },
+  {
+    text: "Si pensás en dejarlo/cortar, ¿sentís culpa o miedo de 'lo que va a pasar'?",
+    answers: [
+      { text: "No me lo planteo", value: 0 },
+      { text: "A veces lo pienso", value: 5 },
+      { text: "Quiero pero no puedo", value: 10 },
+      { text: "Siento que me destruirá si lo hago", value: 15 }
+    ]
+  }
 ];
+
+// Resultados por tier
 const tiers = [
-{min:0,max:25,name:"Relacion sana",class:"tier-green",message:"Tus respuestas indican una dinamica respetuosa. Sos asertivo y la otra persona te respeta. Mantene esa autoestima — es tu mejor proteccion a futuro."},
-{min:26,max:50,name:"Patrones toxicos leves",class:"tier-yellow",message:"Hay senales que conviene revisar. No estas en crisis, pero ciertos patrones pueden empeorar si no se atienden."},
-{min:51,max:75,name:"Manipulacion moderada",class:"tier-orange",message:"La dinamica esta afectando tu autoestima. Lo que estas viviendo tiene un nombre clinico. NO sos vos — es el patron."},
-{min:76,max:105,name:"Manipulacion severa",class:"tier-red",message:"Tus respuestas indican patrones graves de manipulacion emocional. Te recomendamos buscar apoyo profesional inmediato."}
+  { min: 0, max: 25, emoji: "🟢", name: "Relación sana", class: "tier-green",
+    message: "Tus respuestas indican una dinámica respetuosa. Sos asertivo y la otra persona te respeta. Mantené esa autoestima — es tu mejor protección a futuro." },
+  { min: 26, max: 50, emoji: "🟡", name: "Patrones tóxicos leves", class: "tier-yellow",
+    message: "Hay señales que conviene revisar. No estás en crisis, pero ciertos patrones pueden empeorar si no se atienden. Identificalos antes de que se vuelvan normales." },
+  { min: 51, max: 75, emoji: "🟠", name: "Manipulación moderada", class: "tier-orange",
+    message: "La dinámica está afectando tu autoestima. Lo que estás viviendo tiene un nombre clínico. NO sos vos — es el patrón. Hay que tomar acción concreta antes de que escale." },
+  { min: 76, max: 105, emoji: "🔴", name: "Manipulación severa", class: "tier-red",
+    message: "Tus respuestas indican patrones graves de manipulación emocional. Esto NO es exageración tuya — es una dinámica documentada que puede dejar secuelas a largo plazo. Te recomendamos buscar apoyo profesional inmediato." }
 ];
+
+// =================== ESTADO ===================
 let currentQuestion = 0;
 let totalScore = 0;
-function startTest(){document.getElementById('screen-intro').classList.add('hidden');document.getElementById('screen-questions').classList.remove('hidden');showQuestion(0);}
-function showQuestion(idx){currentQuestion=idx;const q=questions[idx];document.getElementById('question-counter').textContent=idx+1;document.getElementById('question-text').textContent=q.text;document.getElementById('progress').style.width=((idx+1)/questions.length*100)+'%';const c=document.getElementById('answers-container');c.innerHTML='';q.answers.forEach(ans=>{const b=document.createElement('button');b.className='answer-option';b.textContent=ans.text;b.onclick=()=>selectAnswer(ans.value);c.appendChild(b);});}
-  function selectAnswer(value){totalScore+=value;if(currentQuestion<questions.length-1){showQuestion(currentQuestion+1);}else{document.getElementById('screen-questions').classList.add('hidden');document.getElementById('screen-email').classList.remove('hidden');document.getElementById('email-input').focus();}}
-async function submitEmail(){const email=document.getElementById('email-input').value.trim();if(!email||!email.includes('@')){alert('Por favor ingresa un email valido.');return;}const btn=document.getElementById('submit-email-btn');btn.disabled=true;btn.innerHTML='Enviando...';const tier=tiers.find(t=>totalScore>=t.min&&totalScore<=t.max);if(BREVO_API_KEY){try{await fetch('https://api.brevo.com/v3/contacts',{method:'POST',headers:{'api-key':BREVO_API_KEY,'Content-Type':'application/json','accept':'application/json'},body:JSON.stringify({email:email,listIds:[BREVO_LIST_ID],updateEnabled:true,attributes:{TEST_SCORE:totalScore,TEST_TIER:tier.name,FUENTE:FUENTE_TAG}})});}catch(err){console.error('Error Brevo:',err);}}else{console.log('Brevo API key no configurada. Email:',email,'Score:',totalScore);}showResult();}
-function showResult(){document.getElementById('screen-email').classList.add('hidden');document.getElementById('screen-result').classList.remove('hidden');const tier=tiers.find(t=>totalScore>=t.min&&totalScore<=t.max);document.getElementById('result-score').textContent=totalScore;const tb=document.getElementById('result-tier');tb.textContent=tier.name;tb.className='tier-badge '+tier.class;document.getElementById('result-message').textContent=tier.message;const su=encodeURIComponent('https://codigomentaltv.github.io/test-manipulador/');const st=encodeURIComponent('Mi resultado en el Test del Manipulador: '+totalScore+'/105 ('+tier.name+'). Hacelo vos tambien — son 60 segundos.');document.getElementById('share-whatsapp').href='https://wa.me/?text='+st+'%20'+su;document.getElementById('share-twitter').href='https://twitter.com/intent/tweet?text='+st+'&url='+su;}
-function copyLink(){navigator.clipboard.writeText('https://codigomentaltv.github.io/test-manipulador/');alert('Link copiado al portapapeles');}
+let answers = [];
+
+// =================== FUNCIONES ===================
+function startTest() {
+  document.getElementById('screen-intro').classList.add('hidden');
+  document.getElementById('screen-questions').classList.remove('hidden');
+  showQuestion(0);
+}
+
+function showQuestion(idx) {
+  currentQuestion = idx;
+  const q = questions[idx];
+  document.getElementById('question-counter').textContent = idx + 1;
+  document.getElementById('question-text').textContent = q.text;
+  document.getElementById('progress').style.width = ((idx + 1) / questions.length * 100) + '%';
+
+  const container = document.getElementById('answers-container');
+  container.innerHTML = '';
+  q.answers.forEach((ans, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'answer-option';
+    btn.textContent = ans.text;
+    btn.onclick = () => selectAnswer(ans.value);
+    container.appendChild(btn);
+  });
+}
+
+function selectAnswer(value) {
+  totalScore += value;
+  answers.push(value);
+  if (currentQuestion < questions.length - 1) {
+    showQuestion(currentQuestion + 1);
+  } else {
+    showEmailGate();
+  }
+}
+
+function showEmailGate() {
+  document.getElementById('screen-questions').classList.add('hidden');
+  document.getElementById('screen-email').classList.remove('hidden');
+  document.getElementById('email-input').focus();
+}
+
+async function submitEmail() {
+  const email = document.getElementById('email-input').value.trim();
+  if (!email || !email.includes('@')) {
+    alert('Por favor ingresá un email válido.');
+    return;
+  }
+
+  const btn = document.getElementById('submit-email-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="loading"></span> Enviando...';
+
+  // Determinar tier
+  const tier = tiers.find(t => totalScore >= t.min && totalScore <= t.max);
+
+  // Enviar a Brevo via Form Embed endpoint público (sin API key cliente)
+  if (BREVO_FORM_URL) {
+    try {
+      const formData = new FormData();
+      formData.append('EMAIL', email);
+      // Custom attributes — solo se guardan si el form Brevo los tiene definidos como campos.
+      // Si no están definidos en el form, Brevo los ignora silenciosamente. Para activarlos:
+      // app.brevo.com -> Contactos -> Atributos -> crear TEST_SCORE (number) + TEST_TIER (text) + FUENTE (text)
+      // y luego en el form Brevo agregarlos como Bloque Atributo en el step Diseño.
+      formData.append('TEST_SCORE', totalScore);
+      formData.append('TEST_TIER', tier.name);
+      formData.append('FUENTE', FUENTE_TAG);
+      // locale + email_address_check son campos hidden estándar de Brevo subscription forms
+      formData.append('locale', 'es');
+      formData.append('email_address_check', '');
+
+      await fetch(BREVO_FORM_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+      // mode: 'no-cors' no permite leer la respuesta, asumimos éxito si no hubo throw.
+      // El email de doble opt-in se dispara desde el lado Brevo automáticamente.
+      console.log('Test del Manipulador submit OK:', { email, score: totalScore, tier: tier.name });
+    } catch (err) {
+      console.error('Error Brevo Form submit:', err);
+    }
+  } else {
+    console.warn('BREVO_FORM_URL no configurada. Email capturado:', email, 'Score:', totalScore);
+  }
+
+  showResult();
+}
+
+function showResult() {
+  document.getElementById('screen-email').classList.add('hidden');
+  document.getElementById('screen-result').classList.remove('hidden');
+
+  const tier = tiers.find(t => totalScore >= t.min && totalScore <= t.max);
+
+  document.getElementById('result-score').textContent = totalScore;
+  const tierBadge = document.getElementById('result-tier');
+  tierBadge.textContent = `${tier.emoji} ${tier.name}`;
+  tierBadge.className = `tier-badge ${tier.class}`;
+  document.getElementById('result-message').textContent = tier.message;
+
+  // Setup share links
+  const shareUrl = encodeURIComponent('https://codigomentaltv.github.io/test-manipulador/');
+  const shareText = encodeURIComponent(`Mi resultado en el Test del Manipulador: ${totalScore}/105 (${tier.name}). Hacelo vos también — son 60 segundos.`);
+
+  document.getElementById('share-whatsapp').href = `https://wa.me/?text=${shareText}%20${shareUrl}`;
+  document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+}
+
+function copyLink() {
+  navigator.clipboard.writeText('https://codigomentaltv.github.io/test-manipulador/');
+  alert('✓ Link copiado al portapapeles');
+}
 </script>
-  </body>
-  </html>
+
+</body>
+</html>
